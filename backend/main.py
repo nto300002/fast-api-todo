@@ -63,7 +63,7 @@ class UserManager:
         db.refresh(db_user)
         return db_user
 
-user_manager = UserManager()
+user_manager = UserManager() #UserManagerクラスのインスタンスを作成
 
 # クラスメソッドをエンドポイントとして使用
 @router.get("/users/", response_model=List[UserResponse]) #レスポンスの形式をUserResponseオブジェクトのリストとして指定（Pydanticモデルで自動的にバリデーションとシリアライズが行われる）
